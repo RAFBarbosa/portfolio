@@ -1,25 +1,28 @@
+@import "utils/breakpoints";
+@import "utils/reset";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 $white: #fff;
 $red: #ff0000;
-$black: #000;
 $green: green;
 
-@import 'utils/breakpoints';
-@import 'utils/reset';
+$raleway: Raleway, sans-serif;
+$primary-color: #323232;
 
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100%;
 }
 
 body {
-  background: linear-gradient(180deg, #ABC6C5 51.56%, #E3E2DC 100%);
-  color: $black;
+  // background: linear-gradient(180deg, #ABC6C5 51.56%, #E3E2DC 100%);
+  color: $primary-color;
 }
 
 h1 {
   font-size: 50px;
-  font-weight: 700;
-  color: blue;
+  font-weight: 500;
 }
 
 .header {
@@ -27,7 +30,6 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid #ccc;
 }
 
 .header__wrapper {
@@ -35,100 +37,66 @@ h1 {
   justify-content: flex-end;
 }
 
-.header__btn {
-  position: relative;
-  display: block;
-  width: 50px;
-  height: 50px;
+.contact__btn {
+  font-family: $raleway;
+  // position: relative;
+  // display: block;
+  width: 90px;
+  height: 29px;
   background: none;
   border: 0;
-  background: $red;
-  
-  @include sm {
-    display: none;
-  }
+  font-size: 25px;
+  font-weight: 200;
+  margin-right: 35px;
+  margin-top: 20px;
 
-  &.active {
-    .header__btn__line {
-      &:nth-child(2) {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      &:nth-child(1) {
-        margin-top: 0;
-        transform: translate(-50%, 0) rotate(45deg)
-      }
-
-      &:nth-child(3) {
-        margin-top: 0;
-        transform: translate(-50%, 0) rotate(-45deg)
-      }
-    }
-  }
+  // @include sm {
+  //   display: none;
+  // }
 }
 
-.header__btn__line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  height: 2px;
-  background: $black;
-  transform: translate(-50%, -50%);
-  transition: all 300ms ease;
-  
-  &:nth-child(1) {
-    margin-top: -10px;
-  }
-  
-  &:nth-child(3) {
-    margin-top: 10px;
-  }
-}
+// .header__nav {
+//   display: none;
+//   position: fixed;
+//   top: 50px;
+//   left: 0;
+//   width: 100%;
+//   padding: 40px 20px;
+//   height: calc(100% - 50px);
+//   background: $white;
 
-.header__nav {
-  display: none;
-  position: fixed;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  padding: 40px 20px;
-  height: calc(100% - 50px);
-  background: $white;
-  
-  @include sm {
-    display: block;
-    position: relative;
-    top: 0;
-    background: none;
-    padding: 20px 0;
-    height: auto;
-  }
+//   @include sm {
+//     display: block;
+//     position: relative;
+//     top: 0;
+//     background: none;
+//     padding: 20px 0;
+//     height: auto;
+//   }
 
-  &.active {
-    display: block;
-  }
+//   &.active {
+//     display: block;
+//   }
 
-  ul {
-    @include sm {
-      display: flex;
-      justify-content: center;
-    }
-  }
+//   ul {
+//     @include sm {
+//       display: flex;
+//       justify-content: center;
+//     }
+//   }
 
-  li {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: green;
+//   li {
+//     padding-bottom: 20px;
+//     border-bottom: 1px solid #ccc;
+//     margin-bottom: 20px;
+//     font-size: 20px;
+//     font-weight: 700;
+//     color: green;
 
-    @include sm {
-      padding-bottom: 0;
-      border-bottom: 0;
-      margin: 0 10px;
-    }
-  }
-}
+//     @include sm {
+//       padding-bottom: 0;
+//       border-bottom: 0;
+//       margin: 0 10px;
+//     }
+//   }
+// }
