@@ -1,0 +1,31 @@
+.about {
+  height: 50vh;
+  background: -webkit-linear-gradient($blue, $lightBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__wrapper {
+  font-size: 20px;
+  font-weight: 200;
+  max-width: $md;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(141, 86, 86, 0.19);
+  border-radius: 5px;
+
+  p {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px 0 0 5px;
+  // padding: 2px;
+}

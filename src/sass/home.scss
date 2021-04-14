@@ -1,0 +1,63 @@
+.home {
+  height: 99vh;
+  
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+}
+
+.home__wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  
+  span {
+    background: -webkit-linear-gradient($lightBlue, $blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.arrow__wrapper {
+  position: absolute;
+  width: 100%;
+
+  animation-name: arrowKick;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+
+  @keyframes arrowKick {
+    0% {
+      bottom: 2vh;
+    }
+    50% {
+      bottom: 4vh;
+    }
+    100% {
+      bottom: 2vh;
+    }
+  }
+}
+
+.arrow {
+  width: 10px;
+  height: 122px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 55%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
