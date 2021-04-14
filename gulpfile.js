@@ -51,7 +51,7 @@ function html(cb) {
 }
 
 function img(cb) {
-  return src('./src/public/img/*')
+  return src('./public/img/*')
     .pipe(dest('./build/public/img/'))
     .pipe(connect.reload());
 }
