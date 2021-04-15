@@ -1,6 +1,6 @@
 @import "utils/breakpoints";
-@import "utils/reset";
 @import "utils/config";
+@import "utils/reset";
 @import "home";
 @import "about";
 @import "projects";
@@ -50,7 +50,7 @@ section {
   margin-right: 25px;
   margin-top: 20px;
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     font-size: 25px;
   }
 }

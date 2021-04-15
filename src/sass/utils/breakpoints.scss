@@ -4,6 +4,12 @@
   }
 }
 
+@mixin for-phone-landscape {
+  @media (max-height: 414px) {
+    @content;
+  }
+}
+
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) {
     @content;
