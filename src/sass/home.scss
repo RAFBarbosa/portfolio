@@ -1,25 +1,39 @@
 .home {
   height: 99vh;
-  
+  // background: $lightGreen;
+
   h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 500;
+    margin: 0 20px;
+
+    @include for-tablet-portrait-up {
+      font-size: 4rem;
+    }
   }
 }
 
 .home__wrapper {
   display: table-cell;
-  vertical-align: middle;
   text-align: center;
-  
+  vertical-align: middle;
+
   span {
-    background: -webkit-linear-gradient($lightBlue, $blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $green;
+    text-shadow: 1.5px 1.5px $red;
+
+    // background: -webkit-linear-gradient($lightGreen, $green);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+
     animation-name: pulse;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+
+    @include for-tablet-portrait-up {
+      text-shadow: 2px 2px $red;
+    }
   }
 }
 
@@ -46,8 +60,8 @@
 }
 
 .arrow {
-  width: 10px;
   height: 122px;
+  width: 10px;
 }
 
 @keyframes pulse {
@@ -55,7 +69,7 @@
     opacity: 100%;
   }
   50% {
-    opacity: 55%;
+    opacity: 60%;
   }
   100% {
     opacity: 100%;

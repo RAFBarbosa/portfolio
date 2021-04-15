@@ -8,15 +8,17 @@
 //   });
 // })()
 
-const checkpoint = 400;
+const checkpointArrow = 800;
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
-  var opacity = 1;
-  if (currentScroll <= checkpoint) {
-    opacity = 1 - currentScroll / checkpoint;
+  let opacity = 1;
+
+  if (currentScroll <= checkpointArrow) {
+    opacity = 1 - currentScroll / checkpointArrow;
   } else {
     opacity = 0;
   }
   document.querySelector(".arrow__wrapper").style.opacity = opacity;
+
 });

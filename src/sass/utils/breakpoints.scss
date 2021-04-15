@@ -1,28 +1,29 @@
-$sm: 600px;
-$md: 900px;
-$lg: 1200px;
-$xl: 1600px;
-
-@mixin sm {
-  @media (min-width: #{$sm}) {
+@mixin for-phone-only {
+  @media (max-width: 599px) {
     @content;
   }
 }
 
-@mixin md {
-  @media (min-width: #{$md}) {
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
     @content;
   }
 }
 
-@mixin lg {
-  @media (min-width: #{$lg}) {
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
     @content;
   }
 }
 
-@mixin xl {
-  @media (min-width: #{$xl}) {
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
     @content;
   }
 }
