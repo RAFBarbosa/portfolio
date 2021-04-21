@@ -1,9 +1,10 @@
 .footer {
-  background: $green;
+  background: $dark;
   height: 260px;
   font-size: 25px;
   font-weight: 500;
   z-index: 10;
+  margin-top: 20px;
   //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),
   //     0 6px 20px 0 rgba(141, 86, 86, 0.19);
 }
@@ -20,7 +21,7 @@
 .footer__arrow {
   border: 0;
   margin: -22px;
-  background: $lightGreen;
+  background: $light;
   padding: 12px 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(141, 86, 86, 0.19);
   // box-shadow: 1.5px 1.5px $red;

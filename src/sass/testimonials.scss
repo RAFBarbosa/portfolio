@@ -6,9 +6,9 @@
   padding-bottom: 45px;
 }
 
-#title__testimonials {
-  color: $green;
-}
+// #title__testimonials {
+//   color: $green;
+// }
 
 .testimonials__wrapper {
   display: flex;
@@ -25,6 +25,7 @@
     font-weight: 300;
     margin: 5px;
     text-align: justify;
+    line-height: 1.4
   }
 
   h3 {

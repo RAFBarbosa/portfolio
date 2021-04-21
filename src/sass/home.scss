@@ -21,21 +21,34 @@
   vertical-align: middle;
 
   span {
-    color: $green;
-    text-shadow: 1.5px 1.5px $red;
+    color: $red;
+    font-weight: 700;
+    // text-shadow: 1.5px 1.5px $red;
 
     // background: -webkit-linear-gradient($lightGreen, $green);
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
 
-    animation-name: pulse;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    // animation-name: pulse;
+    // animation-duration: 5s;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: ease-in-out;
 
-    @include for-tablet-landscape-up {
-      text-shadow: 2px 2px $red;
-    }
+    // @include for-tablet-landscape-up {
+    //   text-shadow: 2px 2px $red;
+    // }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 70%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 
@@ -68,17 +81,5 @@
   @include for-phone-landscape {
     height: 80px;
     width: 8px;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 100%;
-  }
-  50% {
-    opacity: 60%;
-  }
-  100% {
-    opacity: 100%;
   }
 }

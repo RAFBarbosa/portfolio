@@ -20,5 +20,4 @@ window.addEventListener("scroll", () => {
     opacity = 0;
   }
   document.querySelector(".arrow__wrapper").style.opacity = opacity;
-
 });
