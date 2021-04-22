@@ -1,5 +1,7 @@
 .home {
   height: 99vh;
+  display: table;
+  width: 100%;
   // background: $lightGreen;
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
   //   0 6px 20px 0 rgba(141, 86, 86, 0.19);
@@ -55,6 +57,7 @@
 .arrow__wrapper {
   position: absolute;
   width: 100%;
+  filter: hue-rotate(225deg) grayscale(100%);
 
   animation-name: arrowKick;
   animation-duration: 1.5s;
@@ -64,12 +67,15 @@
   @keyframes arrowKick {
     0% {
       bottom: 2vh;
+      filter: hue-rotate(225deg) grayscale(100%);
     }
     50% {
       bottom: 4vh;
+      filter: hue-rotate(225deg) grayscale(0%);
     }
     100% {
       bottom: 2vh;
+      filter: hue-rotate(225deg) grayscale(100%);
     }
   }
 }
@@ -77,6 +83,7 @@
 .arrow {
   height: 122px;
   width: 10px;
+  // filter: hue-rotate(225deg);
 
   @include for-phone-landscape {
     height: 80px;

@@ -1,6 +1,7 @@
 @import "utils/breakpoints";
 @import "utils/config";
 @import "utils/reset";
+@import "contact";
 @import "home";
 @import "about";
 @import "projects";
@@ -12,11 +13,6 @@ body {
   color: $primary-text;
   font-family: $raleway;
   height: 100%;
-  width: 100%;
-}
-
-section {
-  display: table;
   width: 100%;
 }
 
@@ -50,6 +46,7 @@ section {
   font-weight: 200;
   margin-right: 25px;
   margin-top: 20px;
+  cursor: pointer;
 
   @include for-tablet-landscape-up {
     font-size: 25px;

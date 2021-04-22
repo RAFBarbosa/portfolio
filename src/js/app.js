@@ -21,3 +21,16 @@ window.addEventListener("scroll", () => {
   }
   document.querySelector(".arrow__wrapper").style.opacity = opacity;
 });
+
+(function () {
+  const $open = document.querySelector(".contact__btn");
+  const $close = document.querySelector(".contact__close");
+
+  $open.addEventListener("click", () => {
+    document.getElementById("contact__form").style.display = "flex";
+  });
+
+  $close.addEventListener("click", () => {
+    document.getElementById("contact__form").style.display = "none";
+  });
+})();

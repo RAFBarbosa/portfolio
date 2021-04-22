@@ -19,6 +19,7 @@
 }
 
 .footer__arrow {
+  cursor: pointer;
   border: 0;
   margin: -22px;
   background: $light;
@@ -34,9 +35,11 @@
 
 .footer__contact {
   // margin-top: 40px;
+  cursor: pointer;
 }
 
 .links {
+  
 }
 
 .copyright {
