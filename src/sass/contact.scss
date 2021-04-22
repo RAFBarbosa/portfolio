@@ -8,17 +8,27 @@
   position: fixed;
   width: 100%;
   z-index: 20;
+  padding: 0 20px;
 }
 
 .form__wrapper {
   // border: 1px solid green;
-  width: 400px;
+  width: 100%;
+  max-width: 755px;
   display: flex;
   flex-direction: column;
 
-  input {
+  input,
+  textarea {
     padding: 10px;
+    font-family: $raleway;
     margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background: $light;
+    font: $primary-text;
+    resize: none;
+    font-size: 18px;
   }
 }
 
@@ -29,26 +39,40 @@ p {
 }
 
 .message {
-  height: 150px;
+  height: 170px;
+  text-align: left;
+  text-orientation: initial;
   // vertical-align: baseline;
 }
 
 .btn__submit {
-  margin-top: 20px;
-  width: 100px;
-  align-self: flex-end;
+  margin-top: 18px;
+  width: 100%;
+  background: $red;
+  // align-self: flex-end;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: $raleway;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .contact__close {
+  // margin: 25px;
+  align-self: flex-end;
   background: none;
   border: 0;
-  align-self: flex-end;
-  top: 0;
-  height: 50px;
-  position: fixed;
-  margin: 25px;
-  width: 50px;
   cursor: pointer;
+  height: 80px;
+  width: 40px;
+  position: fixed;
+  top: 0;
+
+  @include for-tablet-landscape-up {
+    width: 80px;
+  }
 
   .contact__close__line {
     &:nth-child(1) {
@@ -80,7 +104,7 @@ p {
 
 .contact__close__line {
   background: $primary-text;
-  height: 2px;
+  height: 4px;
   left: 50%;
   position: absolute;
   top: 50%;
