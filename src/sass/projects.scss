@@ -1,10 +1,6 @@
 .projects {
   height: 100vh;
   background: $light;
-  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-  //   0 6px 20px 0 rgba(141, 86, 86, 0.19);
+  display: flex;
+  flex-direction: column;
 }
-
-// #title__projects {
-//   color: $green;
-// }

@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+a {
+  margin: -13px;
+}
+
 .footer__arrow {
   cursor: pointer;
   border: 0;
@@ -34,8 +38,10 @@
 }
 
 .footer__contact {
-  // margin-top: 40px;
+  background-color: $dark;
+  font-size: 18px;
   cursor: pointer;
+  border: 0;
 }
 
 .links {

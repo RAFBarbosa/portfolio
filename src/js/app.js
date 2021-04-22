@@ -23,14 +23,22 @@ window.addEventListener("scroll", () => {
 });
 
 (function () {
-  const $open = document.querySelector(".contact__btn");
+  const $openHeader = document.querySelector(".contact__btn");
+  const $openFooter = document.querySelector(".footer__contact");
   const $close = document.querySelector(".contact__close");
 
-  $open.addEventListener("click", () => {
+  $openHeader.addEventListener("click", () => {
     document.getElementById("contact__form").style.display = "flex";
+    document.querySelector("body").style.overflow = "hidden";
+  });
+
+  $openFooter.addEventListener("click", () => {
+    document.getElementById("contact__form").style.display = "flex";
+    document.querySelector("body").style.overflow = "hidden";
   });
 
   $close.addEventListener("click", () => {
     document.getElementById("contact__form").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
   });
 })();

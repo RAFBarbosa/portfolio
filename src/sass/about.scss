@@ -3,13 +3,12 @@
   background: $dark;
   display: flex;
   flex-direction: column;
-  padding-bottom: 45px;
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(141, 86, 86, 0.19);
-}
 
-// #title__about {
-//   color: #999;
-// }
+  @include for-tablet-portrait-up {
+    padding-bottom: 45px;
+  }
+}
 
 .about__wrapper {
   font-size: 20px;
@@ -21,10 +20,11 @@
   p {
     font-size: 18px;
     line-height: 1.4;
-    margin: 40px 20px 0 20px;
+    text-align: justify;
 
     @include for-tablet-portrait-up {
-      margin: 20px;
+      margin: 20px 20px 0 0;
+      // align-self: center;
     }
   }
 
@@ -38,17 +38,19 @@
 }
 
 .picture {
-  // align-self: center;
+  align-self: center;
   height: 200px;
   width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(141, 86, 86, 0.19);
+  margin-bottom: 40px;
 
   @include for-phone-only {
     align-self: center;
     border-radius: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(141, 86, 86, 0.19);
   }
 
   @include for-tablet-portrait-up {
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
+    margin: 20px;
   }
 }
