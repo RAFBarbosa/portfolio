@@ -47,6 +47,7 @@ body {
   margin-right: 25px;
   margin-top: 20px;
   cursor: pointer;
+  z-index: 15;
 
   @include for-tablet-landscape-up {
     font-size: 25px;
