@@ -48,15 +48,23 @@ p {
 .btn__submit {
   margin-top: 18px;
   width: 100%;
-  background: $red;
+  background: none;
   // align-self: flex-end;
-  border: none;
+  border: 2px solid $primary-text;
   border-radius: 5px;
   padding: 10px;
   font-family: $raleway;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
+  color: $primary-text;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn__submit:hover {
+  background: $primary-text;
+  color: $dark;
 }
 
 .contact__close {
