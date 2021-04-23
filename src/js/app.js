@@ -26,37 +26,35 @@ window.addEventListener("scroll", () => {
   const $openHeader = document.querySelector(".contact__btn");
   const $openFooter = document.querySelector(".footer__contact");
   const $close = document.querySelector(".contact__close");
+  const $pageBlur = document.querySelectorAll(".blur__bg");
 
   $openHeader.addEventListener("click", () => {
     $openHeader.style.display = "none";
     document.querySelector(".contact").style.display = "flex";
     document.querySelector("body").style.overflow = "hidden";
-    document.querySelector(".home").style.filter = "blur(5px)";
-    document.querySelector(".projects").style.filter = "blur(5px)";
-    document.querySelector(".about").style.filter = "blur(5px)";
-    document.querySelector(".testimonials").style.filter = "blur(5px)";
-    document.querySelector(".footer").style.filter = "blur(5px)";
+
+    for (let i = 0; i < $pageBlur.length; i++) {
+      $pageBlur[i].style.filter = "blur(5px)";
+    }
   });
 
   $openFooter.addEventListener("click", () => {
     $openHeader.style.display = "none";
     document.querySelector(".contact").style.display = "flex";
     document.querySelector("body").style.overflow = "hidden";
-    document.querySelector(".home").style.filter = "blur(5px)";
-    document.querySelector(".projects").style.filter = "blur(5px)";
-    document.querySelector(".about").style.filter = "blur(5px)";
-    document.querySelector(".testimonials").style.filter = "blur(5px)";
-    document.querySelector(".footer").style.filter = "blur(5px)";
+    
+    for (let i = 0; i < $pageBlur.length; i++) {
+      $pageBlur[i].style.filter = "blur(5px)";
+    }
   });
 
   $close.addEventListener("click", () => {
     $openHeader.style.display = "flex";
     document.querySelector(".contact").style.display = "none";
     document.querySelector("body").style.overflow = "auto";
-    document.querySelector(".home").style.filter = "blur(0)";
-    document.querySelector(".projects").style.filter = "blur(0)";
-    document.querySelector(".about").style.filter = "blur(0)";
-    document.querySelector(".testimonials").style.filter = "blur(0)";
-    document.querySelector(".footer").style.filter = "blur(0)";
+    
+    for (let i = 0; i < $pageBlur.length; i++) {
+      $pageBlur[i].style.filter = "blur(0px)";
+    }
   });
 })();
