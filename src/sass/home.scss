@@ -49,20 +49,21 @@
   @keyframes arrowKick {
     0% {
       bottom: 2vh;
-      filter: hue-rotate(225deg) grayscale(100%);
+      filter: grayscale(100%);
     }
     50% {
       bottom: 4vh;
-      filter: hue-rotate(225deg) grayscale(0%);
+      filter: grayscale(0%);
     }
     100% {
       bottom: 2vh;
-      filter: hue-rotate(225deg) grayscale(100%);
+      filter: grayscale(100%);
     }
   }
 }
 
 .arrow {
+  filter: hue-rotate(225deg);
   height: 122px;
   width: 10px;
 

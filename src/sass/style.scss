@@ -22,7 +22,6 @@ body {
   font-weight: 700;
   margin: 40px 0;
   text-align: center;
-  // text-shadow: 2px 2px $red;
 }
 
 .header {
@@ -48,8 +47,13 @@ body {
   margin-top: 20px;
   cursor: pointer;
   z-index: 15;
+  transition: all 300ms ease;
 
   @include for-tablet-landscape-up {
     font-size: 25px;
   }
+}
+
+.contact__btn:hover {
+  color: $red;
 }
