@@ -1,9 +1,6 @@
 .testimonials {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonials__wrapper {
@@ -58,4 +55,5 @@ hr {
   margin: 40px auto;
   opacity: 0.3;
   width: 80%;
+  max-width: 760px;
 }

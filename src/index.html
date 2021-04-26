@@ -10,7 +10,7 @@
 
     <header class="header" id="header">
       <div class="header__wrapper">
-        <button type="button" class="contact__btn">Contact</button>
+        <button type="button" class="header__contact">contact</button>
       </div>
     </header>
 
@@ -19,13 +19,13 @@
         <i class="contact__close__line"></i>
         <i class="contact__close__line"></i>
       </button>
-      <h1 class="title">Contact</h1>
+      <h1 class="title">contact</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra. Suspendisse vitae ligula dapibus metus imperdiet faucibus in sit amet justo. Nulla aliquam felis eu pulvinar aliquet. Morbi sed sodales lorem. Vestibulum ac tincidunt diam. Aenean sit amet maximus nisl. Proin risus neque, fringilla vel mi vel, ultricies egestas nisi.</p>
       <form action="" class="form__wrapper">
-        <input type="text" placeholder="Name" name="name" required>
-        <input type="email" placeholder="Email" name="email" required>
-        <textarea type="text" placeholder="Message" class="message" name="message" required></textarea>
-        <button type="submit" class="btn__submit" for="form__wrapper">Submit</button>
+        <input type="text" placeholder="name" name="name" required>
+        <input type="email" placeholder="email" name="email" required>
+        <textarea type="text" placeholder="message" class="message" name="message" required></textarea>
+        <button type="submit" class="btn__submit" for="form__wrapper">submit</button>
       </form>
     </section>
 
@@ -42,14 +42,14 @@
     </section>
 
     <section class="projects blur__bg">
-      <h1 class="title">Projects</h1>
+      <h1 class="title">projects</h1>
       <div class="projects__wrapper">
         
       </div>
     </section>
 
     <section class="about blur__bg">
-      <h1 class="title">About Me</h1>
+      <h1 class="title">about me</h1>
         <div class="about__wrapper">
           <img class="picture" src="./public/img/profile.jpeg" alt="Profile picture"></img>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra. Suspendisse vitae ligula dapibus metus imperdiet faucibus in sit amet justo. Nulla aliquam felis eu pulvinar aliquet. Morbi sed sodales lorem. Vestibulum ac tincidunt diam. Aenean sit amet maximus nisl. Proin risus neque, fringilla vel mi vel, ultricies egestas nisi.</p>
@@ -58,7 +58,7 @@
     </section>
 
     <section class="testimonials blur__bg">
-      <h1 class="title">Testimonials</h1>
+      <h1 class="title">testimonials</h1>
       <div class="testimonials__wrapper">
         <div class="testimonial">
           <i class="fas fa-quote-left"></i>
@@ -80,7 +80,7 @@
 
     <footer class="footer blur__bg">
       <div class="footer__wrapper">
-        <a href="#header">
+        <a href="#header" alt="Back to home">
           <button type="button" class="footer__arrow">
             <!-- <img class="footer__arrow__img" src="../public/img/footer__arrows.png" alt="Go home"></img> -->
             <i class="footer__arrow__line"></i>
@@ -89,14 +89,19 @@
             <i class="footer__arrow__line"></i>
           </button>
         </a>
-        <button type="button" class="footer__contact">Contact</button>
-        <div class="links">Github - Linkedin</div>
-        <div class="copyright">Raf Barbosa © 2021</div>
+        <div class="buttons__wrapper">
+          <button type="button" class="footer__contact">contact</button>
+          <div class="links">
+            <a href="https://github.com/RAFBarbosa" alt="Github" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/rafael-barbosa-b45622130/" alt="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="copyright">Raf Barbosa © 2021</div>
+        </div>
       </div>
     </footer>
 
     <script src="./app.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/87ee3e4b27.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/87ee3e4b27.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
     <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
   </body>

@@ -3,12 +3,13 @@
   background: rgba(227, 227, 227, 0.8);
   display: none;
   flex-direction: column;
-  height: 100vh;
-  justify-content: center;
+  height: 100%;
   padding: 20px;
+  top: 0;
   position: fixed;
   width: 100%;
   z-index: 20;
+  overflow-y: scroll;
 }
 
 .form__wrapper {
@@ -16,6 +17,7 @@
   flex-direction: column;
   max-width: 755px;
   width: 100%;
+  margin-bottom: 20px;
 
   input,
   textarea {
@@ -25,7 +27,6 @@
     color: $primary-text;
     font-family: $raleway;
     font-size: 18px;
-    font: $primary-text;
     margin: 5px 0;
     padding: 10px;
     resize: none;
@@ -47,8 +48,6 @@ p {
 
 .message {
   height: 170px;
-  text-align: left;
-  text-orientation: initial;
 }
 
 .btn__submit {

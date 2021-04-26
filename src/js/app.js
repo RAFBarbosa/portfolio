@@ -23,7 +23,7 @@ window.addEventListener("scroll", () => {
 });
 
 (function () {
-  const $openHeader = document.querySelector(".contact__btn");
+  const $openHeader = document.querySelector(".header__contact");
   const $openFooter = document.querySelector(".footer__contact");
   const $close = document.querySelector(".contact__close");
   const $pageBlur = document.querySelectorAll(".blur__bg");

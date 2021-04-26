@@ -6,17 +6,18 @@
 
 .footer__wrapper {
   height: 100%;
-  padding-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  // padding-bottom: 40px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
 }
 
 .footer__arrow {
   background: $light;
   border: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(141, 86, 86, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),
+    0 6px 20px 0 rgba(141, 86, 86, 0.19);
   cursor: pointer;
   height: 45px;
   left: 50%;
@@ -66,6 +67,16 @@
   }
 }
 
+.buttons__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  // border: 1px solid blue;
+  height: 100%;
+  padding: 35px 0 20px 0;
+}
+
 .footer__contact {
   background: none;
   font-size: 20px;
@@ -73,9 +84,28 @@
   border: 0;
   color: $primary-text;
   font-family: $raleway;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: $red;
+  }
 }
 
 .links {
+  font-size: 45px;
+
+  i {
+    text-decoration: none;
+    margin: 0 5px;
+    cursor: pointer;
+    color: $primary-text;
+    opacity: 100%;
+    transition: all 300ms ease;
+  }
+
+  i:hover {
+    color: $red;
+  }
 }
 
 .copyright {
