@@ -9,11 +9,7 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  // justify-content: center;
-
-  @include for-phone-only {
-    margin: 0 20px 0 20px;
-  }
+  margin: 0 20px;
 }
 
 .testimonial {
