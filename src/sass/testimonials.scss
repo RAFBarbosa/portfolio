@@ -1,6 +1,7 @@
 .testimonials {
   display: flex;
   flex-direction: column;
+  transition: all 400ms ease;
 }
 
 .testimonials__wrapper {

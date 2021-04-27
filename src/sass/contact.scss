@@ -2,30 +2,52 @@
   align-items: center;
   background: rgba(227, 227, 227, 0.8);
   display: none;
+  // opacity: 0;
   flex-direction: column;
   height: 100%;
   padding: 20px;
   top: 0;
   position: fixed;
   width: 100%;
-  z-index: 20;
+  z-index: 2;
   overflow-y: scroll;
-  animation: openContact 600ms ease;
+
+  &.active {
+    display: flex;
+    -webkit-animation: openContact 600ms ease;
+    -moz-animation: openContact 600ms ease;
+    -ms-animation: openContact 600ms ease;
+    -o-animation: openContact 600ms ease;
+    animation: openContact 600ms ease;
+  }
+
+  h1 {
+    opacity: 0;
+
+    &.active {
+      -webkit-animation: showContent 500ms;
+      -moz-animation: showContent 500ms;
+      -ms-animation: showContent 500ms;
+      -o-animation: showContent 500ms;
+      animation: showContent 500ms;
+      opacity: 100%;
+    }
+  }
 
   p {
-    visibility: hidden;
+    opacity: 0;
     line-height: 1.4;
     margin-bottom: 40px;
     max-width: 755px;
 
     &.active {
-      animation: showText 500ms;
-      visibility: visible;
+      -webkit-animation: showContent 500ms;
+      -moz-animation: showContent 500ms;
+      -ms-animation: showContent 500ms;
+      -o-animation: showContent 500ms;
+      animation: showContent 500ms;
+      opacity: 100%;
     }
-  }
-
-  &.active {
-    display: flex;
   }
 }
 
@@ -38,33 +60,32 @@
   }
 }
 
-.contact__title {
-  visibility: hidden;
-
-  &.active {
-    animation: showText 300ms;
-    visibility: visible;
-  }
-}
-
-@keyframes showText {
+@keyframes showContent {
   from {
     opacity: 0;
-    transform: translateX(-20%);
   }
   to {
     opacity: 100%;
-    transform: translateX(0%);
   }
 }
 
 .form__wrapper {
-  visibility: hidden;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   max-width: 755px;
   width: 100%;
   margin-bottom: 20px;
+  transition: all 300ms ease;
+
+  &.active {
+    -webkit-animation: showContent 500ms;
+    -moz-animation: showContent 500ms;
+    -ms-animation: showContent 500ms;
+    -o-animation: showContent 500ms;
+    animation: showContent 500ms;
+    opacity: 100%;
+  }
 
   input,
   textarea {
@@ -112,7 +133,7 @@
 }
 
 .contact__close {
-  visibility: hidden;
+  opacity: 0;
   align-self: flex-end;
   background: none;
   border: 0;
@@ -121,9 +142,19 @@
   position: fixed;
   top: 0;
   width: 40px;
+  transition: all 300ms ease;
 
   @include for-tablet-landscape-up {
     width: 80px;
+  }
+
+  &.active {
+    -webkit-animation: showContent 500ms;
+    -moz-animation: showContent 500ms;
+    -ms-animation: showContent 500ms;
+    -o-animation: showContent 500ms;
+    animation: showContent 500ms;
+    opacity: 100%;
   }
 }
 
@@ -132,12 +163,12 @@
     background: $red;
     &:nth-child(1) {
       margin-top: 0;
-      transform: translate(-50%, 0) rotate(220deg);
+      transform: translate(-50%, 0) rotate(135deg) scale(0.8);
     }
 
     &:nth-child(2) {
       margin-top: 0;
-      transform: translate(-50%, 0) rotate(135deg);
+      transform: translate(-50%, 0) rotate(45deg) scale(0.8);
     }
   }
 }
@@ -154,11 +185,11 @@
 
   &:nth-child(1) {
     margin-top: 0px;
-    transform: translate(-50%, 0) rotate(45deg);
+    transform: translate(-50%, 0) rotate(45deg) scale(1);
   }
 
   &:nth-child(2) {
     margin-top: 0px;
-    transform: translate(-50%, 0) rotate(-45deg);
+    transform: translate(-50%, 0) rotate(-45deg) scale(1);
   }
 }

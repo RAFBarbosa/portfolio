@@ -24,12 +24,13 @@ window.addEventListener("scroll", () => {
 
 const $openHeader = document.querySelector(".header__contact");
 const $openFooter = document.querySelector(".footer__contact");
-const $close = document.querySelector(".contact__close");
+const $contactClose = document.querySelector(".contact__close");
 const $pageBlur = document.querySelectorAll(".blur__bg");
 const $body = document.querySelector("body");
 const $contact = document.querySelector(".contact");
-const $contactTitle = document.querySelector(".contact__title");
+const $contactTitle = document.querySelector(".title");
 const $contactText = document.querySelector(".contact__text");
+const $contactForm = document.querySelector(".form__wrapper");
 
 (function () {
   $openHeader.addEventListener("click", () => {
@@ -40,7 +41,7 @@ const $contactText = document.querySelector(".contact__text");
     setTimeout(openContact, 300);
   });
 
-  $close.addEventListener("click", () => {
+  $contactClose.addEventListener("click", () => {
     closeContact();
   });
 })();
@@ -51,11 +52,11 @@ function openContact() {
   $body.style.overflow = "hidden";
   $contact.classList.toggle("active");
   setTimeout(function () {
+    $contactClose.classList.toggle("active");
     $contactTitle.classList.toggle("active");
-  }, 600);
-  setTimeout(function () {
     $contactText.classList.toggle("active");
-  }, 800);
+    $contactForm.classList.toggle("active");
+  }, 600);
 
   for (let i = 0; i < $pageBlur.length; i++) {
     $pageBlur[i].style.filter = "blur(5px)";
@@ -63,9 +64,15 @@ function openContact() {
 }
 
 function closeContact() {
-  // $openHeader.style.display = "flex";
-  $contact.style.display = "none";
+  $openHeader.style.display = "flex";
+  // $contact.style.display = "none";
   $body.style.overflow = "auto";
+
+  $contact.classList.toggle("active");
+  $contactClose.classList.toggle("active");
+  $contactTitle.classList.toggle("active");
+  $contactText.classList.toggle("active");
+  $contactForm.classList.toggle("active");
 
   for (let i = 0; i < $pageBlur.length; i++) {
     $pageBlur[i].style.filter = "blur(0px)";
