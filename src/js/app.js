@@ -10,6 +10,23 @@
 
 const checkpointArrow = 800;
 
+const $openHeader = document.querySelector(".header__contact");
+const $openFooter = document.querySelector(".footer__contact");
+const $contactClose = document.querySelector(".contact__close");
+const $pageBlur = document.querySelectorAll(".blur__bg");
+const $body = document.querySelector("body");
+const $contact = document.querySelector(".contact");
+const $contactTitle = document.querySelector(".title");
+const $contactText = document.querySelector(".contact__text");
+const $contactForm = document.querySelector(".form__wrapper");
+
+(function () {
+  $body.style.overflow = "hidden";
+  setTimeout(function () {
+    $body.style.overflow = "auto";
+  }, 5000);
+})();
+
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
   let opacity = 1;
@@ -21,16 +38,6 @@ window.addEventListener("scroll", () => {
   }
   document.querySelector(".arrow__wrapper").style.opacity = opacity;
 });
-
-const $openHeader = document.querySelector(".header__contact");
-const $openFooter = document.querySelector(".footer__contact");
-const $contactClose = document.querySelector(".contact__close");
-const $pageBlur = document.querySelectorAll(".blur__bg");
-const $body = document.querySelector("body");
-const $contact = document.querySelector(".contact");
-const $contactTitle = document.querySelector(".title");
-const $contactText = document.querySelector(".contact__text");
-const $contactForm = document.querySelector(".form__wrapper");
 
 (function () {
   $openHeader.addEventListener("click", () => {
@@ -48,7 +55,6 @@ const $contactForm = document.querySelector(".form__wrapper");
 
 function openContact() {
   $openHeader.style.display = "none";
-  // $contact.style.display = "flex";
   $body.style.overflow = "hidden";
   $contact.classList.toggle("active");
   setTimeout(function () {
@@ -65,7 +71,6 @@ function openContact() {
 
 function closeContact() {
   $openHeader.style.display = "flex";
-  // $contact.style.display = "none";
   $body.style.overflow = "auto";
 
   $contact.classList.toggle("active");
