@@ -10,9 +10,56 @@
   width: 100%;
   z-index: 20;
   overflow-y: scroll;
+  animation: openContact 600ms ease;
+
+  p {
+    visibility: hidden;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    max-width: 755px;
+
+    &.active {
+      animation: showText 500ms;
+      visibility: visible;
+    }
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+@keyframes openContact {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.contact__title {
+  visibility: hidden;
+
+  &.active {
+    animation: showText 300ms;
+    visibility: visible;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
 }
 
 .form__wrapper {
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   max-width: 755px;
@@ -40,12 +87,6 @@
   }
 }
 
-p {
-  line-height: 1.4;
-  margin-bottom: 40px;
-  max-width: 755px;
-}
-
 .message {
   height: 170px;
 }
@@ -71,6 +112,7 @@ p {
 }
 
 .contact__close {
+  visibility: hidden;
   align-self: flex-end;
   background: none;
   border: 0;

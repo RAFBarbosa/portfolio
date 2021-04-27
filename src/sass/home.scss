@@ -47,17 +47,13 @@
   animation-timing-function: ease-out;
 
   @keyframes arrowKick {
-    0% {
+    0%, 100% {
       bottom: 2vh;
       filter: grayscale(100%);
     }
     50% {
       bottom: 4vh;
       filter: grayscale(0%);
-    }
-    100% {
-      bottom: 2vh;
-      filter: grayscale(100%);
     }
   }
 }
