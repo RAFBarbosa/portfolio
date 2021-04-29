@@ -56,7 +56,13 @@ function public(cb) {
     .pipe(connect.reload());
 }
 
-exports.build = series(html, css, javascript, public);
+function img(cb) {
+  return src('./public/img/*')
+    .pipe(dest('./build/public/img'))
+    .pipe(connect.reload());
+}
+
+exports.build = series(html, css, javascript, public, img);
 
 exports.watch = function () {
   server();
