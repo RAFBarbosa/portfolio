@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Natalia & Victor",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
+    "tools": ["Figma", "HTML", "Sass", "JavaScript"],
+    "photo": "https://picsum.photos/300/300"
+  },
+  {
+    "name": "My Portfolio",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
+    "tools": ["Figma", "HTML", "Sass", "JavaScript"],
+    "photo": "https://picsum.photos/300/300"
+  },
+  {
+    "name": "Gersao",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
+    "tools": ["Figma", "HTML", "Sass", "JavaScript"],
+    "photo": "https://picsum.photos/300/300"
+  },
+  {
+    "name": "AFER Inc.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
+    "tools": ["Figma", "HTML", "Sass", "JavaScript"],
+    "photo": "https://picsum.photos/300/300"
+  }
+]
