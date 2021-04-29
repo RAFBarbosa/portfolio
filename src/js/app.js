@@ -8,6 +8,8 @@
 //   });
 // })()
 
+import Request from "./projects.js";
+
 const checkpointArrow = 800;
 
 const $openHeader = document.querySelector(".header__contact");
@@ -19,6 +21,8 @@ const $contact = document.querySelector(".contact");
 const $contactTitle = document.querySelector(".title");
 const $contactText = document.querySelector(".contact__text");
 const $contactForm = document.querySelector(".form__wrapper");
+
+Request();
 
 (function () {
   $body.style.overflow = "hidden";

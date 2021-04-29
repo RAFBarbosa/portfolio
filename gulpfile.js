@@ -50,13 +50,13 @@ function html(cb) {
     .pipe(connect.reload());
 }
 
-function img(cb) {
-  return src('./public/img/*')
-    .pipe(dest('./build/public/img/'))
+function public(cb) {
+  return src('./public/*')
+    .pipe(dest('./build/public/'))
     .pipe(connect.reload());
 }
 
-exports.build = series(html, css, javascript, img);
+exports.build = series(html, css, javascript, public);
 
 exports.watch = function () {
   server();
