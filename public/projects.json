@@ -1,6 +1,6 @@
 [
   {
-    "name": "Natalia & Victor",
+    "name": "Natália & Victor",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
     "tools": ["Figma", "HTML", "Sass", "JavaScript"],
     "photo": "https://picsum.photos/300/300"
@@ -12,7 +12,7 @@
     "photo": "https://picsum.photos/300/300"
   },
   {
-    "name": "Gersao",
+    "name": "Gersão",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
     "tools": ["Figma", "HTML", "Sass", "JavaScript"],
     "photo": "https://picsum.photos/300/300"

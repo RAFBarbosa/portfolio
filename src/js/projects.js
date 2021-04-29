@@ -13,13 +13,13 @@ export default function Request() {
         const photo = document.createElement("img");
         const name = document.createElement("h2");
         const description = document.createElement("p");
-        const toolsTitle = document.createElement("span");
+        const toolsTitle = document.createElement("h3");
         const toolsUl = document.createElement("ul");
 
         photo.src = project[i].photo;
         name.textContent = project[i].name;
         description.textContent = project[i].description;
-        toolsTitle.textContent = "Tools used on this project:"
+        toolsTitle.textContent = "Tools used on this project:";
 
         const tools = project[i].tools;
         for (var j = 0; j < tools.length; j++) {
