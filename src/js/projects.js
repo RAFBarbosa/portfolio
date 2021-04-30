@@ -16,6 +16,20 @@ export default function Request() {
         const toolsTitle = document.createElement("h3");
         const toolsUl = document.createElement("ul");
 
+        // ---- FADE IN TRANSITION ---- //
+        const dataAos = document.createAttribute("data-aos");
+        const dataDuration = document.createAttribute("data-aos-duration");
+        const dataDelay = document.createAttribute("data-aos-delay");
+
+        dataAos.value = ("fade-up");
+        dataDuration.value = ("1000");
+        dataDelay.value = ("500" * (i/5));
+
+        projects__wrapper__item.setAttributeNode(dataAos);
+        projects__wrapper__item.setAttributeNode(dataDuration);
+        projects__wrapper__item.setAttributeNode(dataDelay);
+        // ---------------------------- //
+
         photo.src = project[i].photo;
         name.textContent = project[i].name;
         description.textContent = project[i].description;
@@ -24,7 +38,7 @@ export default function Request() {
         const tools = project[i].tools;
         for (var j = 0; j < tools.length; j++) {
           const listItem = document.createElement("li");
-          listItem.textContent = tools[j];
+          listItem.textContent = "+ " + tools[j];
           toolsUl.appendChild(listItem);
         }
 

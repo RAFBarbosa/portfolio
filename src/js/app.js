@@ -24,12 +24,12 @@ const $contactForm = document.querySelector(".form__wrapper");
 
 Request();
 
-(function () {
-  $body.style.overflow = "hidden";
-  setTimeout(function () {
-    $body.style.overflow = "auto";
-  }, 5000);
-})();
+// (function () {
+//   $body.style.overflow = "hidden";
+//   setTimeout(function () {
+//     $body.style.overflow = "auto";
+//   }, 5000);
+// })();
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;

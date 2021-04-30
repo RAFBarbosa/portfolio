@@ -22,5 +22,6 @@
     "node-sass": "^5.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "dependencies": {}
 }
