@@ -1,13 +1,3 @@
-// (function() {
-//   const $btn = document.querySelector('.header__btn');
-//   const $nav = document.querySelector('.header__nav');
-
-//   $btn.addEventListener('click', () => {
-//     $btn.classList.toggle('active');
-//     $nav.classList.toggle('active');
-//   });
-// })()
-
 import Request from "./projects.js";
 
 const checkpointArrow = 800;
@@ -21,15 +11,6 @@ const $contact = document.querySelector(".contact");
 const $contactTitle = document.querySelector(".title");
 const $contactText = document.querySelector(".contact__text");
 const $contactForm = document.querySelector(".form__wrapper");
-
-Request();
-
-// (function () {
-//   $body.style.overflow = "hidden";
-//   setTimeout(function () {
-//     $body.style.overflow = "auto";
-//   }, 5000);
-// })();
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
@@ -87,3 +68,5 @@ function closeContact() {
     $pageBlur[i].style.filter = "blur(0px)";
   }
 }
+
+Request();
