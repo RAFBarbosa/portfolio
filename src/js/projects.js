@@ -19,7 +19,7 @@ export default function Request() {
 
         projects__wrapper__item.classList.add("projects__wrapper__item");
 
-        // ---- FADE IN TRANSITION ---- //
+        // ---- AOS FADE IN TRANSITION ---- //
         const dataAos = document.createAttribute("data-aos");
         const dataDuration = document.createAttribute("data-aos-duration");
         const dataDelay = document.createAttribute("data-aos-delay");
@@ -34,7 +34,7 @@ export default function Request() {
         aos__wrapper.setAttributeNode(dataDuration);
         aos__wrapper.setAttributeNode(dataDelay);
         aos__wrapper.setAttributeNode(dataOnce);
-        // ---------------------------- //
+        // -------------------------------- //
 
         photo.src = project[i].photo;
         name.textContent = project[i].name;

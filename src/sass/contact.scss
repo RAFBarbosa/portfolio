@@ -17,10 +17,6 @@
 
   &.active {
     display: flex;
-    // -webkit-animation: openContact 600ms ease;
-    // -moz-animation: openContact 600ms ease;
-    // -ms-animation: openContact 600ms ease;
-    // -o-animation: openContact 600ms ease;
     animation: openContact 600ms ease;
   }
 
@@ -28,10 +24,6 @@
     opacity: 0;
 
     &.active {
-      // -webkit-animation: showContent 500ms;
-      // -moz-animation: showContent 500ms;
-      // -ms-animation: showContent 500ms;
-      // -o-animation: showContent 500ms;
       animation: showContent 500ms;
       opacity: 100%;
     }
@@ -44,10 +36,6 @@
     max-width: 755px;
 
     &.active {
-      // -webkit-animation: showContent 500ms;
-      // -moz-animation: showContent 500ms;
-      // -ms-animation: showContent 500ms;
-      // -o-animation: showContent 500ms;
       animation: showContent 500ms;
       opacity: 100%;
     }
@@ -82,10 +70,6 @@
   transition: all 300ms ease;
 
   &.active {
-    // -webkit-animation: showContent 500ms;
-    // -moz-animation: showContent 500ms;
-    // -ms-animation: showContent 500ms;
-    // -o-animation: showContent 500ms;
     animation: showContent 500ms;
     opacity: 100%;
   }
@@ -156,10 +140,6 @@
   }
 
   &.active {
-    // -webkit-animation: showContent 500ms;
-    // -moz-animation: showContent 500ms;
-    // -ms-animation: showContent 500ms;
-    // -o-animation: showContent 500ms;
     animation: showContent 500ms;
     opacity: 100%;
   }
