@@ -23,14 +23,17 @@ export default function Request() {
         const dataAos = document.createAttribute("data-aos");
         const dataDuration = document.createAttribute("data-aos-duration");
         const dataDelay = document.createAttribute("data-aos-delay");
+        const dataOnce = document.createAttribute("data-aos-once");
 
-        dataAos.value = ("fade-up");
-        dataDuration.value = ("1000");
-        dataDelay.value = ("500" * (i/5));
+        dataAos.value = "fade-up";
+        dataDuration.value = "1000";
+        dataDelay.value = "500" * (i / 5);
+        dataOnce.value = "true";
 
         aos__wrapper.setAttributeNode(dataAos);
         aos__wrapper.setAttributeNode(dataDuration);
         aos__wrapper.setAttributeNode(dataDelay);
+        aos__wrapper.setAttributeNode(dataOnce);
         // ---------------------------- //
 
         photo.src = project[i].photo;
