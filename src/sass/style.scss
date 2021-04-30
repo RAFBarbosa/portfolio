@@ -16,6 +16,8 @@ body {
   width: 100%;
   scroll-behavior: smooth;
   --scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media (prefers-reduced-motion: reduce) {
     .my-smooth-container {
@@ -48,6 +50,8 @@ body {
   background: none;
   border: 0;
   font-family: $raleway;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: $primary-text;
   font-size: 20px;
   font-weight: 200;

@@ -9,12 +9,15 @@ export default function Request() {
       const project = data;
 
       for (let i = 0; i < project.length; i++) {
-        const projects__wrapper__item = document.createElement("article");
+        const aos__wrapper = document.createElement("div");
+        const projects__wrapper__item = document.createElement("div");
         const photo = document.createElement("img");
         const name = document.createElement("h2");
         const description = document.createElement("p");
         const toolsTitle = document.createElement("h3");
         const toolsUl = document.createElement("ul");
+
+        projects__wrapper__item.classList.add("projects__wrapper__item");
 
         // ---- FADE IN TRANSITION ---- //
         const dataAos = document.createAttribute("data-aos");
@@ -25,9 +28,9 @@ export default function Request() {
         dataDuration.value = ("1000");
         dataDelay.value = ("500" * (i/5));
 
-        projects__wrapper__item.setAttributeNode(dataAos);
-        projects__wrapper__item.setAttributeNode(dataDuration);
-        projects__wrapper__item.setAttributeNode(dataDelay);
+        aos__wrapper.setAttributeNode(dataAos);
+        aos__wrapper.setAttributeNode(dataDuration);
+        aos__wrapper.setAttributeNode(dataDelay);
         // ---------------------------- //
 
         photo.src = project[i].photo;
@@ -47,8 +50,9 @@ export default function Request() {
         projects__wrapper__item.appendChild(description);
         projects__wrapper__item.appendChild(toolsTitle);
         projects__wrapper__item.appendChild(toolsUl);
+        aos__wrapper.appendChild(projects__wrapper__item);
 
-        wrapper.appendChild(projects__wrapper__item);
+        wrapper.appendChild(aos__wrapper);
       }
     });
 }

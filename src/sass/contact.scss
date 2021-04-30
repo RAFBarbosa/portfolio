@@ -97,6 +97,8 @@
     border: none;
     color: $primary-text;
     font-family: $raleway;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-size: 18px;
     margin: 5px 0;
     padding: 10px;
@@ -122,6 +124,8 @@
   color: $primary-text;
   cursor: pointer;
   font-family: $raleway;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
   font-weight: 500;
   margin-top: 18px;
