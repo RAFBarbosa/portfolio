@@ -12,6 +12,7 @@ export default function Request() {
         const aos__wrapper = document.createElement("div");
         const projects__wrapper__item = document.createElement("div");
         const photo = document.createElement("img");
+        const photoAlt = document.createAttribute("alt");
         const name = document.createElement("h2");
         const description = document.createElement("p");
         const toolsTitle = document.createElement("h3");
@@ -38,6 +39,7 @@ export default function Request() {
 
         photo.src = project[i].photo;
         name.textContent = project[i].name;
+        photoAlt.value = project[i].name + " photo";
         description.textContent = project[i].description;
         toolsTitle.textContent = "Tools used on this project:";
 
@@ -49,6 +51,7 @@ export default function Request() {
         }
 
         projects__wrapper__item.appendChild(photo);
+        photo.setAttributeNode(photoAlt);
         projects__wrapper__item.appendChild(name);
         projects__wrapper__item.appendChild(description);
         projects__wrapper__item.appendChild(toolsTitle);
