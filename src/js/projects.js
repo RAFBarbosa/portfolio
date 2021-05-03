@@ -10,7 +10,7 @@ export default function Request() {
 
       for (let i = 0; i < project.length; i++) {
         const aos__wrapper = document.createElement("div");
-        const projects__wrapper__item = document.createElement("div");
+        const projects__wrapper__item = document.createElement("figure");
         const photo = document.createElement("img");
         const photoAlt = document.createAttribute("alt");
         const name = document.createElement("h2");
