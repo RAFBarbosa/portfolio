@@ -1,5 +1,5 @@
 export default function Request() {
-  const wrapper = document.querySelector(".projects__wrapper");
+  const $wrapper = document.querySelector(".projects__wrapper");
 
   fetch("../public/projects.json")
     .then(function (data) {
@@ -9,56 +9,108 @@ export default function Request() {
       const project = data;
 
       for (let i = 0; i < project.length; i++) {
-        const aos__wrapper = document.createElement("div");
-        const projects__wrapper__item = document.createElement("figure");
-        const photo = document.createElement("img");
-        const photoAlt = document.createAttribute("alt");
-        const name = document.createElement("h2");
-        const description = document.createElement("p");
-        const toolsTitle = document.createElement("h3");
-        const toolsUl = document.createElement("ul");
+        const $aosWrapper = document.createElement("div");
+        const $projectsWrapperItem = document.createElement("div");
+        const $textContentWrapper = document.createElement("article");
+        const $photo = document.createElement("img");
+        const $photoAlt = document.createAttribute("alt");
+        const $name = document.createElement("h2");
+        const $description = document.createElement("p");
+        const $toolsTitle = document.createElement("h3");
+        const $toolsUl = document.createElement("ul");
+        const $link = document.createElement("a");
 
-        projects__wrapper__item.classList.add("projects__wrapper__item");
+        $projectsWrapperItem.classList.add("projects__wrapper__item");
+        $textContentWrapper.classList.add("projects__wrapper__item__text");
 
         // ---- AOS FADE IN TRANSITION ---- //
-        const dataAos = document.createAttribute("data-aos");
-        const dataDuration = document.createAttribute("data-aos-duration");
-        const dataDelay = document.createAttribute("data-aos-delay");
-        const dataOnce = document.createAttribute("data-aos-once");
+        const $dataAos = document.createAttribute("data-aos");
+        const $dataDuration = document.createAttribute("data-aos-duration");
+        const $dataDelay = document.createAttribute("data-aos-delay");
+        const $dataOnce = document.createAttribute("data-aos-once");
 
-        dataAos.value = "fade-up";
-        dataDuration.value = "1000";
-        dataDelay.value = "500" * (i / 5);
-        dataOnce.value = "true";
+        $dataAos.value = "fade-up";
+        $dataDuration.value = "1000";
+        $dataDelay.value = "500" * (i / 5);
+        $dataOnce.value = "true";
 
-        aos__wrapper.setAttributeNode(dataAos);
-        aos__wrapper.setAttributeNode(dataDuration);
-        aos__wrapper.setAttributeNode(dataDelay);
-        aos__wrapper.setAttributeNode(dataOnce);
+        $aosWrapper.setAttributeNode($dataAos);
+        $aosWrapper.setAttributeNode($dataDuration);
+        $aosWrapper.setAttributeNode($dataDelay);
+        $aosWrapper.setAttributeNode($dataOnce);
         // -------------------------------- //
 
-        photo.src = project[i].photo;
-        name.textContent = project[i].name;
-        photoAlt.value = project[i].name + " photo";
-        description.textContent = project[i].description;
-        toolsTitle.textContent = "Tools used on this project:";
+        $photo.src = project[i].photo;
+        $name.innerHTML = project[i].name;
+        $photoAlt.value = project[i].name + " photo";
+        $description.innerHTML = project[i].description;
+        $toolsTitle.innerHTML = "Tools used on this project:";
+        $link.innerHTML = project[i].link;
 
         const tools = project[i].tools;
-        for (var j = 0; j < tools.length; j++) {
+
+        for (let j = 0; j < tools.length; j++) {
           const listItem = document.createElement("li");
           listItem.textContent = "+ " + tools[j];
-          toolsUl.appendChild(listItem);
+          $toolsUl.appendChild(listItem);
         }
 
-        projects__wrapper__item.appendChild(photo);
-        photo.setAttributeNode(photoAlt);
-        projects__wrapper__item.appendChild(name);
-        projects__wrapper__item.appendChild(description);
-        projects__wrapper__item.appendChild(toolsTitle);
-        projects__wrapper__item.appendChild(toolsUl);
-        aos__wrapper.appendChild(projects__wrapper__item);
+        $projectsWrapperItem.appendChild($photo);
+        $photo.setAttributeNode($photoAlt);
+        $textContentWrapper.appendChild($name);
+        $textContentWrapper.appendChild($description);
+        $textContentWrapper.appendChild($toolsTitle);
+        $textContentWrapper.appendChild($toolsUl);
+        $projectsWrapperItem.appendChild($textContentWrapper);
+        $aosWrapper.appendChild($projectsWrapperItem);
 
-        wrapper.appendChild(aos__wrapper);
+        $wrapper.appendChild($aosWrapper);
+
+        // $aosWrapper.addEventListener("click", () => {
+        //   addModal(
+        //     $name.innerHTML,
+        //     $description.innerHTML,
+        //     $photo.src,
+        //     $toolsUl.innerHTML,
+        //     $link.innerHTML
+        //   );
+        // });
       }
     });
 }
+
+// function addModal(name, description, photo, tools, link) {
+//   const $modal = document.querySelector(".projects__modal");
+//   const $modalContent = document.querySelector(".projects__modal__content");
+//   const $modalName = document.createElement("h1");
+//   const $modalPhoto = document.createElement("img");
+//   const $modalDescription = document.createElement("p");
+//   const $modalTools = document.createElement("ul");
+//   const $modalLink = document.createElement("a");
+//   const $pageBlur = document.querySelectorAll(".blur__bg");
+//   const $body = document.querySelector("body");
+
+//   $modalName.classList.add("title");
+
+//   $modalName.innerHTML = name;
+//   $modalPhoto.src = photo;
+//   $modalDescription.innerHTML = description;
+//   $modalTools.innerHTML = tools;
+//   $modalLink.innerHTML = link;
+//   $modalLink.href = link;
+//   $modalLink.target = "_blank";
+
+//   $modalContent.appendChild($modalName);
+//   $modalContent.appendChild($modalPhoto);
+//   $modalContent.appendChild($modalDescription);
+//   $modalContent.appendChild($modalTools);
+//   $modalContent.appendChild($modalLink);
+
+//   $modal.style.display = "flex";
+
+//   $body.style.overflow = "hidden";
+
+//   for (let i = 0; i < $pageBlur.length; i++) {
+//     $pageBlur[i].style.filter = "blur(5px)";
+//   }
+// }

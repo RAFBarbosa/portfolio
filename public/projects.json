@@ -1,26 +1,34 @@
 [
   {
     "name": "Natália & Victor",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
+    "description": "Qui duis nisi qui ut eiusmod eiusmod dolor minim. Mollit eu in reprehenderit consequat eu. Eu veniam ipsum.",
     "tools": ["Figma", "HTML", "Sass", "JavaScript"],
-    "photo": "https://picsum.photos/300/300"
+    "photo": "https://picsum.photos/300/300",
+    "photoBig": "https://picsum.photos/700/450",
+    "link": "https://nataliaevictor.com.br"
   },
   {
     "name": "My Portfolio",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
+    "description": "Velit eu veniam ut eiusmod eu deserunt id cillum occaecat quis deserunt proident ea eu. Aliqua.",
     "tools": ["Figma", "HTML", "Sass", "JavaScript"],
-    "photo": "https://picsum.photos/300/300"
+    "photo": "https://picsum.photos/300/300",
+    "photoBig": "https://picsum.photos/700/450",
+    "link": "https://nataliaevictor.com.br"
   },
   {
     "name": "Gersão",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
+    "description": "Laboris veniam exercitation culpa ullamco elit sunt in sit. Adipisicing laboris excepteur minim proident ad. Cillum laborum.",
     "tools": ["Figma", "HTML", "Sass", "JavaScript"],
-    "photo": "https://picsum.photos/300/300"
+    "photo": "https://picsum.photos/300/300",
+    "photoBig": "https://picsum.photos/700/450",
+    "link": "https://nataliaevictor.com.br"
   },
   {
     "name": "AFER Inc.",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra.",
     "tools": ["Figma", "HTML", "Sass", "JavaScript"],
-    "photo": "https://picsum.photos/300/300"
+    "photo": "https://picsum.photos/300/300",
+    "photoBig": "https://picsum.photos/700/450",
+    "link": "https://nataliaevictor.com.br"
   }
 ]

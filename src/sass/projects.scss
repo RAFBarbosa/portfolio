@@ -11,9 +11,9 @@
 
 .projects__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  max-width: 1800px;
+  // max-width: 1800px;
 }
 
 .projects__wrapper__item {
@@ -23,34 +23,42 @@
   background: white;
   margin: 10px;
   padding: 20px;
+  height: 400px;
+  width: 755px;
+  display: flex;
 
-  img {
-    margin-bottom: 15px;
-    width: 300px;
-    height: 300px;
-  }
-  h2 {
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
+  &__text {
+    display: flex;
+    flex-direction: column;
 
-  p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    max-width: 300px;
-    line-height: 1.3;
-  }
+    img {
+      // margin-bottom: 15px;
+      width: 300px;
+      height: auto;
+    }
+    h2 {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
 
-  h3 {
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
+    p {
+      font-size: 18px;
+      max-width: 300px;
+      line-height: 1.3;
+    }
 
-  ul {
-    font-size: 15px;
-    line-height: 1.3;
+    h3 {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 10px;
+      margin-top: auto;
+    }
+
+    ul {
+      font-size: 15px;
+      line-height: 1.3;
+    }
   }
 
   &:hover {
