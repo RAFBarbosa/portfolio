@@ -47,17 +47,12 @@
   align-self: center;
   height: 250px;
   width: 250px;
+  border-radius: 50%;
 
   @include for-phone-only {
     margin-bottom: 20px;
     align-self: center;
-    border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(141, 86, 86, 0.19);
-  }
-
-  @include for-tablet-portrait-up {
-    border-radius: 0px;
-    // margin: 20px 0 20px 20px;
   }
 }
