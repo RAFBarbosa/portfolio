@@ -10,7 +10,7 @@
   {
     "name": "My Portfolio",
     "description": "Et mollit reprehenderit officia nostrud duis irure aliquip dolore consequat veniam sint Lorem. Minim nisi adipisicing amet ut consequat mollit enim nulla ex consectetur est cillum eiusmod eu. Ad nulla dolore veniam in fugiat esse in id commodo ut. ",
-    "tools": ["Figma", "HTML", "Sass", "JavaScript", "Gulp.js"],
+    "tools": ["Figma", "HTML", "Sass", "JavaScript", "Gulp.js", "Rest API"],
     "photo": "https://picsum.photos/600/360",
     "photoMobile": "https://picsum.photos/270/151",
     "link": "https://nataliaevictor.com.br"
