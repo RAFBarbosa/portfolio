@@ -19,6 +19,7 @@ export default function Request() {
         const $toolsTitle = document.createElement("h3");
         const $toolsUl = document.createElement("ul");
         const $link = document.createElement("a");
+        const $divider = document.createElement("hr");
 
         $projectsWrapperItem.classList.add("projects__wrapper__item");
         $textContentWrapper.classList.add("projects__wrapper__item__text");
@@ -31,7 +32,7 @@ export default function Request() {
 
         $dataAos.value = "fade-up";
         $dataDuration.value = "1000";
-        $dataDelay.value = "500" * (i / 5);
+        $dataDelay.value = "700";
         $dataOnce.value = "true";
 
         $aosWrapper.setAttributeNode($dataAos);
@@ -55,14 +56,18 @@ export default function Request() {
           $toolsUl.appendChild(listItem);
         }
 
-        $projectsWrapperItem.appendChild($photo);
-        $photo.setAttributeNode($photoAlt);
         $textContentWrapper.appendChild($name);
         $textContentWrapper.appendChild($description);
         $textContentWrapper.appendChild($toolsTitle);
         $textContentWrapper.appendChild($toolsUl);
         $projectsWrapperItem.appendChild($textContentWrapper);
+        $projectsWrapperItem.appendChild($photo);
+        $photo.setAttributeNode($photoAlt);
         $aosWrapper.appendChild($projectsWrapperItem);
+
+        if (i + 1 < project.length) {
+          $aosWrapper.appendChild($divider);
+        }
 
         $wrapper.appendChild($aosWrapper);
 

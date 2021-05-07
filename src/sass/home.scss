@@ -6,45 +6,39 @@
 
   font-size: 2rem;
   font-weight: 500;
+  background-color: $darkGrey;
+  color: $light;
 
   @include for-tablet-landscape-up {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 }
 
 .home__wrapper {
   display: table-cell;
-  text-align: center;
+  // text-align: center;
   vertical-align: middle;
+
+  h1 {
+    margin-left: 50px;
+  }
 
   div {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: baseline;
 
     .title__h1 {
       &:last-child {
-        color: $red;
+        color: $yellow;
         font-weight: 700;
-        margin: 5px 0 5px 8.5px;
+        margin: 0 0 5px 8.5px;
 
         @include for-tablet-landscape-up {
-          margin: 5px 0 5px 17px;
+          margin: 0 0 5px 17px;
         }
       }
     }
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 100%;
-  }
-  50% {
-    opacity: 70%;
-  }
-  100% {
-    opacity: 100%;
   }
 }
 
@@ -68,24 +62,17 @@
 }
 
 .arrow {
-  filter: hue-rotate(225deg);
+  position: absolute;
+  filter: hue-rotate(280deg);
   height: 123px;
   width: 12px;
-  // opacity: 0;
+  left: calc(50% - 6px);
+  bottom: 0;
 
-  // animation: arrowFade 2s ease forwards 4s;
+  transform: translate(-50%, 0);
 
   @include for-phone-landscape {
     height: 80px;
     width: 8px;
-  }
-
-  @keyframes arrowFade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 100%;
-    }
   }
 }
