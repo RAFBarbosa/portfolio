@@ -45,7 +45,7 @@ export default function Request() {
         $name.innerHTML = project[i].name;
         $photoAlt.value = project[i].name + " photo";
         $description.innerHTML = project[i].description;
-        $toolsTitle.innerHTML = "Tools used on this project:";
+        $toolsTitle.innerHTML = "Tools used in this project:";
         $link.innerHTML = project[i].link;
 
         const tools = project[i].tools;

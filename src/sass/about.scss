@@ -18,27 +18,33 @@
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  margin-left: 50px;
+  margin: 0 15px;
+
+  @include for-desktop-up {
+    width: 1200px;
+    align-self: center;
+  }
 
   p {
     font-size: 18px;
     line-height: 1.4;
-    text-align: justify;
+    margin-bottom: 100px;
+    // text-align: justify;
   }
 
   @include for-tablet-portrait-up {
     // margin: 0 20px;
-    flex-direction: row;
-    background-color: white;
+    margin: 0 50px;
+    // flex-direction: row;
+    // background-color: white;
     // border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    // border: 1px solid rgba(0, 0, 0, 0.2);
     // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     //   0 6px 20px 0 rgba(141, 86, 86, 0.19);
-    max-width: 755px;
+    // max-width: 755px;
 
     p {
-      padding-left: 20px;
+      // padding: 0 50px;
     }
   }
 }
@@ -48,11 +54,6 @@
   height: 250px;
   width: 250px;
   border-radius: 50%;
-
-  @include for-phone-only {
-    margin-bottom: 20px;
-    align-self: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(141, 86, 86, 0.19);
-  }
+  margin: 10px 10px 110px 10px;
+  box-shadow: 0 0 0 10px $yellow;
 }

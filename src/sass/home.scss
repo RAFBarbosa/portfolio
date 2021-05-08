@@ -7,7 +7,7 @@
   font-size: 2rem;
   font-weight: 500;
   background-color: $darkGrey;
-  color: $light;
+  color: white;
 
   @include for-tablet-landscape-up {
     font-size: 4.5rem;
@@ -23,19 +23,25 @@
     margin-left: 50px;
   }
 
-  div {
-    display: flex;
-    // justify-content: center;
-    align-items: baseline;
+  .home__wrapper__text {
+    @include for-desktop-up {
+      width: 1200px;
+      margin: 40px auto;
+    }
+    
+    div {
+      display: flex;
+      align-items: baseline;
 
-    .title__h1 {
-      &:last-child {
-        color: $yellow;
-        font-weight: 700;
-        margin: 0 0 5px 8.5px;
+      .title__h1 {
+        &:last-child {
+          color: $yellow;
+          font-weight: 700;
+          margin: 0 0 5px 8.5px;
 
-        @include for-tablet-landscape-up {
-          margin: 0 0 5px 17px;
+          @include for-tablet-landscape-up {
+            margin: 0 0 5px 17px;
+          }
         }
       }
     }
