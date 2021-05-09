@@ -15,20 +15,29 @@
     margin: 0 50px;
   }
 
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+    align-items: center;
+  }
+
   @include for-desktop-up {
     width: 1200px;
     margin: 0 auto;
   }
 
   hr {
-    background-color: $primary-text;
+    background-color: $grey;
     border: 0;
-    display: block;
     height: 1px;
-    margin: 40px auto;
-    opacity: 0.3;
-    width: 80%;
-    max-width: 760px;
+    margin: 40px 0;
+    width: 100%;
+    
+    @include for-tablet-landscape-up {
+      flex: 1;
+      max-width: 100%;
+      transform: rotate(90deg) scaleX(2.5);
+      margin: 0;
+    }
   }
 }
 
@@ -36,6 +45,8 @@
   display: flex;
   flex-direction: column;
   font-size: 18px;
+  align-self: flex-start;
+  flex: 5;
 
   p {
     font-weight: 300;
@@ -55,8 +66,8 @@
     align-self: flex-end;
   }
 
-  @include for-tablet-portrait-up {
-    // max-width: 760px;
+  @include for-tablet-landscape-up {
+    // max-width: 20%;
   }
 }
 

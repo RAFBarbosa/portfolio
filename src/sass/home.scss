@@ -28,16 +28,16 @@
   // text-align: center;
   vertical-align: middle;
 
-  h1 {
-    @include for-big-desktop-up {
+  .home__wrapper__text {
+    margin-left: 15px;
+
+    @include for-tablet-portrait-up {
       margin-left: 50px;
     }
-  }
 
-  .home__wrapper__text {
     @include for-desktop-up {
       width: 1200px;
-      margin: 40px auto;
+      margin: auto;
     }
 
     div {
