@@ -8,7 +8,7 @@
   font-weight: 500;
   background-color: $darkGrey;
   color: white;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @include for-tablet-portrait-up {
     font-size: 2.7rem;
@@ -24,6 +24,7 @@
 }
 
 .home__wrapper {
+  overflow-x: hidden;
   display: table-cell;
   // text-align: center;
   vertical-align: middle;

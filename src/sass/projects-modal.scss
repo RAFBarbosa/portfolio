@@ -9,6 +9,7 @@
   background-color: rgba(227, 227, 227, 0.8);
   animation: openModal 600ms ease;
   z-index: 200;
+  overflow-x: hidden;
 }
 
 .projects__modal__content {
