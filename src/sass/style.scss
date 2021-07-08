@@ -39,14 +39,14 @@ body {
   }
 
   @include for-desktop-up {
-    width: 1200px;
+    width: 1100px;
     margin: 60px auto;
   }
 }
 
 #title__contact {
   @include for-desktop-up {
-    width: auto;
+    text-align: center;
   }
 }
 
