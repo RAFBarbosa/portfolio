@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Front-end developer student, learning HTML, CSS, Sass, JavaScript">
+    <title>Raf Barbosa | Front-End Developer</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+
+    <header class="header" id="header">
+      <div class="header__wrapper" data-aos="fade" data-aos-delay="3000" data-aos-once="true">
+        <button type="button" class="header__contact" aria-label="Contact">contact</button>
+      </div>
+    </header>
+
+    <section class="contact">
+      <button type="button" class="contact__close">
+        <i class="contact__close__line"></i>
+        <i class="contact__close__line"></i>
+      </button>
+      <h1 class="title" id="title__contact">contact</h1>
+      <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra. Suspendisse vitae ligula dapibus metus imperdiet faucibus in sit amet justo. Nulla aliquam felis eu pulvinar aliquet. Morbi sed sodales lorem. Vestibulum ac tincidunt diam. Aenean sit amet maximus nisl. Proin risus neque, fringilla vel mi vel, ultricies egestas nisi.</p>
+      <form action="" class="form__wrapper">
+        <input type="text" placeholder="name" name="name" required>
+        <input type="email" placeholder="email" name="email" required>
+        <textarea type="text" placeholder="message" class="message" name="message" required></textarea>
+        <button type="submit" class="btn__submit" for="form__wrapper">submit</button>
+      </form>
+    </section>
+
+    <section class="home blur__bg">
+      <div class="home__wrapper">
+        <div class="home__wrapper__text">
+          <div>
+            <h1 class="title__h1" data-aos="fade-left" data-aos-once="true">Hi, I’m</h1>
+            <h1 class="title__h1" data-aos="fade-left" data-aos-delay="500" data-aos-once="true">Raf Barbosa</h1>
+          </div>
+          <h1 data-aos="fade-left" data-aos-delay="1200" data-aos-once="true">I’m a front-end developer</h1>
+        </div>
+        <div class="arrow__wrapper" id="arrow__wrapper">
+          <img class="arrow" src="./public/img/arrow.png" alt="Arrow Down" data-aos="fade" data-aos-delay="3000" data-aos-once="true"></img>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects blur__bg">
+      <h1 class="title" data-aos="fade" data-aos-once="true">projects</h1>
+      <div class="projects__wrapper"></div>
+    </section>
+
+    <section class="about blur__bg">
+      <h1 class="title" data-aos="fade" data-aos-once="true">about me</h1>
+      <div class="about__wrapper" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur tellus eget nulla venenatis viverra. Suspendisse vitae ligula dapibus metus imperdiet faucibus in sit amet justo. Nulla aliquam felis eu pulvinar aliquet. Morbi sed sodales lorem. Vestibulum ac tincidunt diam. Aenean sit amet maximus nisl. Proin risus neque, fringilla vel mi vel, ultricies egestas nisi.</p>
+        <div class="picture__wrapper">
+          <img class="picture" src="./public/img/profile.jpeg" alt="Profile picture"></img>
+          <!-- <div class="about__tools">
+              <div class="about__tools__html"><img class="about__tools__img" src="./public/img/html.png" alt="HTML5"></img></div>
+              <div class="about__tools__css"><img class="about__tools__img" src="./public/img/react.png" alt="Sass"></div>
+              <div class="about__tools__javascript"><img class="about__tools__img" src="./public/img/js.png" alt="JavaScript"></div>
+              <div class="about__tools__figma"><img class="about__tools__img" src="./public/img/figma.png" alt="Figma"></div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials blur__bg">
+      <h1 class="title" data-aos="fade" data-aos-mirror="false" data-aos-once="true">testimonials</h1>
+      <div class="testimonials__wrapper" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+        <div class="testimonial">
+          <i class="fas fa-quote-left"></i>
+          <p>Rafael is a incredible professional! He focused exactly in what we asked for our wedding website. Not only making  the website itself, but also giving us suggestions of how to make it look even better! We are highly satisfied and surely recommend him to everyone!</p>
+          <i class="fas fa-quote-right"></i>
+          <h3>Natália & Victor</h3>
+          <h4><a href="http://nataliaevictor.com.br" target="_blank">nataliaevictor.com.br</a></h4>
+        </div>
+        <hr class="divider"></hr>
+        <div class="testimonial">
+          <i class="fas fa-quote-left"></i>
+          <p>Rafael has been maintaining our website <a href="http://aferinc.com" target="_blank">www.aferinc.com</a> for a while now and he’s amazing!! Things that’s I’ve missed, he’s picked up on, thank goodness. Rafael continues to impress us with his knowledge, efficiency and understanding of what we’re looking for in regards to our website. I would 100% recommend him to anyone.</p>
+          <i class="fas fa-quote-right"></i>
+          <h3>Jennifer Kaitting</h3>
+          <h4><a href="http://aferinc.com" target="_blank">AFER Inc.</a> Vice President</h4>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer blur__bg">
+      <div class="footer__wrapper">
+        <a href="#header" alt="Back to the top" >
+          <button type="button" class="footer__arrow" aria-label="Back to the top">
+            <i class="footer__arrow__line"></i>
+            <i class="footer__arrow__line"></i>
+            <i class="footer__arrow__line"></i>
+            <i class="footer__arrow__line"></i>
+          </button>
+        </a>
+        <div class="buttons__wrapper">
+          <button type="button" class="footer__contact" aria-label="Contact">contact</button>
+          <div class="links">
+            <a href="https://github.com/RAFBarbosa" alt="Github" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/rafael-barbosa-b45622130/" alt="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="copyright">Raf Barbosa © 2021</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/87ee3e4b27.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 800,
+          easing: 'ease-in-out'
+        }
+        );
+    </script>
+  </body>
+</html>
