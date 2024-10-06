@@ -1,94 +1,94 @@
 .home {
-  height: 99vh;
-  display: table;
-  width: 100%;
-  transition: all 400ms ease;
+	height: 99vh;
+	display: table;
+	width: 100%;
+	transition: all 400ms ease;
 
-  font-size: 2rem;
-  font-weight: 500;
-  background-color: $darkGrey;
-  color: white;
-  // overflow-x: hidden;
+	font-size: 2rem;
+	font-weight: 500;
+	background-color: $darkGrey;
+	color: white;
+	// overflow-x: hidden;
 
-  @include for-tablet-portrait-up {
-    font-size: 2.7rem;
-  }
+	@include for-tablet-portrait-up {
+		font-size: 2.7rem;
+	}
 
-  @include for-tablet-landscape-up {
-    font-size: 3.5rem;
-  }
+	@include for-tablet-landscape-up {
+		font-size: 3.5rem;
+	}
 
-  @include for-desktop-up {
-    font-size: 4.5rem;
-  }
+	@include for-desktop-up {
+		font-size: 4.5rem;
+	}
 }
 
 .home__wrapper {
-  overflow-x: hidden;
-  display: table-cell;
-  // text-align: center;
-  vertical-align: middle;
+	overflow-x: hidden;
+	display: table-cell;
+	// text-align: center;
+	vertical-align: middle;
 
-  .home__wrapper__text {
-    margin-left: 15px;
+	.home__wrapper__text {
+		margin-left: 15px;
 
-    @include for-tablet-portrait-up {
-      margin-left: 50px;
-    }
+		@include for-tablet-portrait-up {
+			margin-left: 50px;
+		}
 
-    @include for-desktop-up {
-      width: 1100px;
-      margin: auto;
-    }
+		@include for-desktop-up {
+			width: 1100px;
+			margin: auto;
+		}
 
-    div {
-      display: flex;
-      align-items: baseline;
+		div {
+			display: flex;
+			align-items: baseline;
 
-      .title__h1 {
-        &:last-child {
-          color: $yellow;
-          font-weight: 700;
-          margin: 0 0 5px 8.5px;
+			.title__h1 {
+				&:last-child {
+					color: $yellow;
+					font-weight: 700;
+					margin: 0 0 5px 8.5px;
 
-          @include for-tablet-landscape-up {
-            margin: 0 0 5px 17px;
-          }
-        }
-      }
-    }
-  }
+					@include for-tablet-landscape-up {
+						margin: 0 0 5px 17px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .arrow__wrapper {
-  position: absolute;
-  width: 100%;
+	position: absolute;
+	width: 100%;
 
-  animation: arrowKick 1.5s infinite ease-out;
+	animation: arrowKick 1.5s infinite ease-out;
 
-  @keyframes arrowKick {
-    0%,
-    100% {
-      bottom: 2vh;
-      filter: grayscale(100%);
-    }
-    50% {
-      bottom: 3vh;
-      filter: grayscale(0%);
-    }
-  }
+	@keyframes arrowKick {
+		0%,
+		100% {
+			bottom: 2vh;
+			filter: grayscale(100%);
+		}
+		50% {
+			bottom: 3vh;
+			filter: grayscale(0%);
+		}
+	}
 }
 
 .arrow {
-  position: absolute;
-  filter: hue-rotate(280deg);
-  height: 123px;
-  width: 12px;
-  left: calc(50% - 6px);
-  bottom: 0;
+	position: absolute;
+	filter: hue-rotate(280deg);
+	height: 123px;
+	width: 12px;
+	left: calc(50% - 6px);
+	bottom: 0;
 
-  @include for-phone-landscape {
-    height: 80px;
-    width: 8px;
-  }
+	@include for-phone-landscape {
+		height: 80px;
+		width: 8px;
+	}
 }
