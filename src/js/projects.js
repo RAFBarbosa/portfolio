@@ -34,8 +34,8 @@ export default function Request() {
 				const $dataOnce = document.createAttribute("data-aos-once");
 
 				$dataAos.value = "fade-up";
-				$dataDuration.value = "1000";
-				$dataDelay.value = "700";
+				$dataDuration.value = "500";
+				$dataDelay.value = "250";
 				$dataOnce.value = "true";
 
 				$aosWrapper.setAttributeNode($dataAos);
@@ -49,7 +49,9 @@ export default function Request() {
 				$photoAlt.value = project[i].name + " photo";
 				$description.innerHTML = project[i].description;
 				$toolsTitle.innerHTML = "Tools used in this project:";
-				$link.innerHTML = project[i].link;
+				$link.innerHTML = `Check it out <span class="material-symbols-outlined icon">arrow_forward_ios</span>`;
+				$link.href = project[i].link;
+				$link.target = "_blank";
 
 				const tools = project[i].tools;
 
@@ -63,6 +65,7 @@ export default function Request() {
 				$textContentWrapper.appendChild($description);
 				$textContentWrapper.appendChild($toolsTitle);
 				$textContentWrapper.appendChild($toolsUl);
+				$textContentWrapper.appendChild($link);
 				$projectsWrapperItem.appendChild($textContentWrapper);
 				$projectsWrapperItem.appendChild($photo);
 				$photo.setAttributeNode($photoAlt);
@@ -73,52 +76,6 @@ export default function Request() {
 				}
 
 				$wrapper.appendChild($aosWrapper);
-
-				// $aosWrapper.addEventListener("click", () => {
-				//   addModal(
-				//     $name.innerHTML,
-				//     $description.innerHTML,
-				//     $photo.src,
-				//     $toolsUl.innerHTML,
-				//     $link.innerHTML
-				//   );
-				// });
 			}
 		});
 }
-
-// function addModal(name, description, photo, tools, link) {
-//   const $modal = document.querySelector(".projects__modal");
-//   const $modalContent = document.querySelector(".projects__modal__content");
-//   const $modalName = document.createElement("h1");
-//   const $modalPhoto = document.createElement("img");
-//   const $modalDescription = document.createElement("p");
-//   const $modalTools = document.createElement("ul");
-//   const $modalLink = document.createElement("a");
-//   const $pageBlur = document.querySelectorAll(".blur__bg");
-//   const $body = document.querySelector("body");
-
-//   $modalName.classList.add("title");
-
-//   $modalName.innerHTML = name;
-//   $modalPhoto.src = photo;
-//   $modalDescription.innerHTML = description;
-//   $modalTools.innerHTML = tools;
-//   $modalLink.innerHTML = link;
-//   $modalLink.href = link;
-//   $modalLink.target = "_blank";
-
-//   $modalContent.appendChild($modalName);
-//   $modalContent.appendChild($modalPhoto);
-//   $modalContent.appendChild($modalDescription);
-//   $modalContent.appendChild($modalTools);
-//   $modalContent.appendChild($modalLink);
-
-//   $modal.style.display = "flex";
-
-//   $body.style.overflow = "hidden";
-
-//   for (let i = 0; i < $pageBlur.length; i++) {
-//     $pageBlur[i].style.filter = "blur(5px)";
-//   }
-// }

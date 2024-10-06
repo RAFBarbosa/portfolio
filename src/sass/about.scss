@@ -20,16 +20,18 @@
 	display: flex;
 	flex-direction: column;
 	margin: 0 15px;
+	align-self: center;
+	justify-content: space-between;
 
 	@include for-desktop-up {
 		width: 1100px;
-		align-self: center;
+		flex-direction: row;
 	}
 
-	p {
+	&__text {
 		font-size: 18px;
 		line-height: 1.4;
-		margin-bottom: 100px;
+		color: brown;
 		// text-align: justify;
 	}
 
@@ -51,15 +53,15 @@
 }
 
 .picture__wrapper {
-	display: flex;
-	justify-content: center;
+	// display: flex;
+	// justify-content: center;
 }
 
 .picture {
 	// align-self: center;
-	height: 250px;
 	width: 250px;
+	height: auto;
 	border-radius: 50%;
-	margin: 10px 10px 110px 10px;
+	margin: 10px 10px 10px 10px;
 	box-shadow: 0 0 0 10px $yellow;
 }
