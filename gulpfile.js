@@ -54,11 +54,23 @@ function public(cb) {
 		.pipe(connect.reload());
 }
 
+// function img(cb) {
+// 	return gulp
+// 		.src("./public/img/*", { encoding: false })
+// 		.pipe(gulp.dest("./build/public/img"))
+// 		.pipe(connect.reload());
+// }
+
 function img(cb) {
-	return src("./public/img/*")
+	return src("./public/img/*", { encoding: false })
 		.pipe(dest("./build/public/img"))
 		.pipe(connect.reload());
 }
+
+// gulp.task('default', function () {
+//     return gulp.src('./public/img/*', {encoding: false})
+//         .pipe(gulp.dest('./build/public/img'));
+// });
 
 exports.build = series(html, css, javascript, public, img);
 
